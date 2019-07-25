@@ -1,0 +1,145 @@
+<Window 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+		xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"		
+        Title="Material Design Theme Manager" 
+        Width="580" 
+        Height="310"  
+	     WindowStartupLocation="CenterScreen" 
+        BorderThickness="0"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        ResizeMode="NoResize">
+
+<Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+            
+            <!-- work Only In 2.6 Material Design /-->
+             <materialDesign:BundledTheme BaseTheme="Light" PrimaryColor="DeepPurple" SecondaryColor="Lime" />
+                
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <!--ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" /-->
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+	
+       <Grid>
+<materialDesign:ColorZone
+  Mode="PrimaryMid"
+  Padding="16">
+  <DockPanel>
+    <materialDesign:PopupBox
+      DockPanel.Dock="Right"
+      PlacementMode="BottomAndAlignRightEdges">
+      <ListBox>
+        <ListBoxItem>
+        @JM2K69
+      </ListBoxItem>
+        <ListBoxItem Name="Goodbye">
+        Goodbye.
+      </ListBoxItem>
+      </ListBox>
+    </materialDesign:PopupBox>
+    <StackPanel
+      Orientation="Horizontal">
+      <ToggleButton
+        Style="{DynamicResource MaterialDesignHamburgerToggleButton}" />
+      <TextBlock
+      Style="{StaticResource MaterialDesignTitleTextBlock}"
+        VerticalAlignment="Center"
+        HorizontalAlignment="Center"
+        Margin="80 0 0 0">
+      Material Design Theme Manager 
+    </TextBlock>
+    </StackPanel>
+  </DockPanel>
+</materialDesign:ColorZone>
+       
+<StackPanel Name="SP_Principal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10 60 0 0">
+
+<StackPanel Orientation="Horizontal">
+   <StackPanel Orientation="Horizontal">
+                <TextBlock VerticalAlignment="Center">Light</TextBlock>
+
+                <ToggleButton Name="Mode" Margin="8 0 16 0"  />
+
+                <TextBlock VerticalAlignment="Center">Dark</TextBlock>
+     </StackPanel>
+       <ComboBox materialDesign:HintAssist.Hint="Primary"
+  Style="{StaticResource MaterialDesignFloatingHintComboBox}"  materialDesign:ComboBoxAssist.ShowSelectedItem="True" Name="Color" SelectedIndex="0" Height="40" Width="130" Margin="20,10,0,10"/>         
+       <ComboBox materialDesign:HintAssist.Hint="Accent"
+  Style="{StaticResource MaterialDesignFloatingHintComboBox}"  materialDesign:ComboBoxAssist.ShowSelectedItem="True" Name="Secondary" SelectedIndex="0" Height="40" Width="130" Margin="20,10,0,10"/>
+    </StackPanel>
+	<StackPanel Name="SP_Contenu" Orientation="Vertical">
+	
+ <StackPanel Orientation="Horizontal" Margin="0 20 0 0">
+
+ <Grid
+  Width="124">
+  <Button
+    Style="{StaticResource MaterialDesignRaisedLightButton}"
+    Height="50"
+    Margin="0 0 10 0"
+    ToolTip="LightButton">
+    <TextBlock
+      Text="Light Button" />
+  </Button>
+</Grid>
+
+<Grid
+  Width="124">
+  <Button
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    Height="50"
+    Margin="0 0 10 0"
+    ToolTip="Button">
+    <TextBlock
+      Text="Button" />
+  </Button>
+</Grid>
+
+<Grid
+  Width="124">
+  <Button
+    Style="{StaticResource MaterialDesignRaisedDarkButton}"
+    Height="50"
+    Margin="0 0 10 0"
+    ToolTip="Dark Button">
+    <TextBlock
+      Text="Dark Button" />
+  </Button>
+</Grid>
+
+<Grid
+  Width="134">
+  <Button
+    Style="{StaticResource MaterialDesignRaisedAccentButton}"
+    Height="50"
+    Margin="0 0 10 0"
+    ToolTip="Accent Button">
+    <TextBlock
+      Text="Accent Button" />
+  </Button>
+</Grid>
+	</StackPanel>		
+	</StackPanel>
+</StackPanel>
+
+        </Grid>
+</Window>     
+
+
+   
+   
+    
+    
+    
